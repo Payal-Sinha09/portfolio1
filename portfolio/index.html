@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payal Sinha-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-grey {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        /* Styling for the "About Me" section */
+
+        #about {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        #about h1 {
+            font-size: 1.9rem;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+
+        .about-text h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Additional styling (optional) */
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            width: 70%;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 10px;
+        }
+
+        .project-link {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 10px;
+        }
+
+        .footer {
+            background-color: #0e0e1a;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 233px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .footer ul a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .footer ul a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        footer .contact-no {
+            color: gray;
+        }
+
+
+        .education {
+            max-width: 80vw;
+            margin: auto;
+            height: 60vh;
+        }
+
+        .education h1 {
+            font-size: 1.9rem;
+        }
+
+        .education .box2 {
+            background: white;
+            width: 70vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .education .vertical-edu {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 150px;
+        }
+
+        .education h3 {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .education p {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Payal's Portfolio</div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Payal</span>
+                <div>and I am a</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn" onclick="downloadResume()">Download Resume</button>
+                    <a href="https://github.com/Payal-Sinha09" target="_blank">
+                        <button class="btn">Visit GitHub</button>
+                    </a>
+                      
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="developer.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="about">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <img src="profile-picture.jpg" alt="Payal Sinha">
+                <div class="about-text">
+                    <h3>Hi, I'm Payal Sinha</h3>
+                    <p>I am a passionate front-end web developer currently pursuing a Bachelor of Technology in
+                        Mechanical Engineering at IIT Dhanbad.</p>
+                    <p>With a strong foundation in engineering principles and a keen eye for design, I combine my
+                        technical knowledge with my creative skills to develop visually appealing and user-friendly
+                        websites.</p>
+                    <p>Throughout my academic journey, I have gained experience in various programming languages and web
+                        development frameworks, including HTML, CSS, JavaScript, and React. I enjoy the process of
+                        transforming ideas into functional and aesthetically pleasing websites.</p>
+                    <p>Aside from my technical pursuits, I actively engage in continuous learning to stay updated with
+                        the latest web development trends and techniques. I am enthusiastic about collaborating with
+                        like-minded individuals and contributing to impactful projects.</p>
+                    <p>If you have any questions or would like to discuss potential collaborations, feel free to reach
+                        out to me. I am always excited to explore new opportunities in the field of front-end web
+                        development.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="projects" class="secondSection">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Projects</h1>
+            <div class="box">
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Movie Finder
+                    </div>
+                    <div class="vertical-desc">
+                        A dynamic movie finder website using HTML, CSS, JavaScript, and APIs to provide users with a
+                        seamless experience in discovering information about movies. The website allows users to search
+                        for specific movies and retrieve details such as the director's name, genre, rating, release
+                        date, and title.
+                    </div>
+                    <div class="project-link">
+                        GitHub Link :
+                        <a href="https://github.com/Payal-Sinha09/movie-finder"
+                            target="_blank">https://github.com/Payal-Sinha09/movie-finder</a>
+                    </div>
+                </div>
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Weather App
+                    </div>
+                    <div class="vertical-desc">
+                        A weather app website provide users with real-time weather information for any city around the
+                        world. The website allows users to search for a specific city and retrieve details such as
+                        temperature, wind speed, and humidity.
+                    </div>
+                    <div class="project-link">
+                        Website link :
+                        <a href="https://real-time-weather-info.netlify.app"
+                            target="_blank">https://real-time-weather-info.netlify.app</a>
+                    </div>
+                </div>
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Expense Tracker
+                    </div>
+                    <div class="vertical-desc">
+                        ‘Expense Tracker’ website allows users to track their expenses. Expense Tracker website contains
+                        two components -add expense section and add category section. In the add category section all
+                        the previously available categories are mentioned along with the amount spent on each category.
+                        When the add category button is clicked the user needs to enter the category name.In the add
+                        expense section the expenses made by the user are displayed in the table. If theyclick the add
+                        expense button the users need to enter the amount of the expense, the category of the expense,
+                        the dateof the expense and some notes for their expense.
+                    </div>
+                    <div class="project-link">
+                        Website link :
+                        <a href="https://expense-tracker-0904.netlify.app"
+                            target="_blank">https://expense-tracker-0904.netlify.app</a>
+                    </div>
+                </div>
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Coffee Shop
+                    </div>
+                    <div class="vertical-desc">
+                        A Coffee Shop website allows users to easily order coffee online. The website provides a
+                        user-friendly interface where customers can browse through the menu, select their desired coffee
+                        items, and place their orders. The order details are sent to the owner's email for processing.
+                    </div>
+                    <div class="project-link">
+                        Website link :
+                        <a href="https://marvelous-coffee-shop.netlify.app"
+                            target="_blank">https://marvelous-coffee-shop.netlify.app</a>
+                    </div>
+                </div>
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Photo Gallery
+                    </div>
+                    <div class="vertical-desc">
+                        A Photo Gallery website serves as a visual showcase of various photographs. This website is
+                        designed to provide users with an immersive and aesthetically pleasing experience, allowing them
+                        to browse through a collection of photos and view them in a visually optimized manner.
+                    </div>
+                    <div class="project-link">
+                        Website link :
+                        <a href=" https://amazing-photo-gallery.netlify.app/" target="_blank">
+                            https://amazing-photo-gallery.netlify.app/</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section id="Education" class="education">
+            <h1>Education</h1>
+            <div class="box2">
+                <div class="vertical-edu">
+                    <h3>Indian Institute of Technology, Dhanbad</h3>
+                    <p>B.Tech in Mechanical Engineering, 2021-2025</p>
+                    <p>CGPA : 8.29</p>
+                </div>
+                <div class="vertical-edu">
+                    <h3>D.A.V. Public School,Koyla Nagar Dhanbad</h3>
+                    <p>Intermediate, 2020</p>
+                    <p>Percentage : 95.6%</p>
+                </div>
+                <div class="vertical-edu">
+                    <h3>Dhanbad Public School, Dhanbad</h3>
+                    <p>Matriculation, 2018</p>
+                    <p>Percentage : 94.8%</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Payal's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    Contact Number : <span class="contact-no">9386505414</span>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    Email : <a href="payal09apr@gmail.com" target="_blank">payal09apr@gmail.com</a>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    LinkedIn Id : <a href="https://www.linkedin.com/in/payal-sinha-58467620b"
+                        target="_blank">https://www.linkedin.com/in/payal-sinha-58467620b</a>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.payalsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Front-end Web Developer', 'Student of IIT Dhanbad'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetSection = document.querySelector(link.getAttribute('href'));
+                if (link.getAttribute('href') === '#contact') {
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                } else {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+    </script>
+    <script>
+        function downloadResume() {
+            const resumeFile = "resume.pdf";
+            const link = document.createElement("a");
+            link.href = resumeFile;
+            link.download = resumeFile;
+            link.click();
+        }
+    </script>
+</body>
+
+</html>
